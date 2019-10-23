@@ -6,7 +6,7 @@ pipeline {
     
       stage('run sonar and postgress') {
       steps {
-        sh 'docker-compose up -d'
+        sh 'docker-compose docker-compose.sonar.yml up -d'
         sleep(time: 30, unit: 'SECONDS')
       }
     }
